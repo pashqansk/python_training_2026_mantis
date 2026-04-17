@@ -1,0 +1,2 @@
+# python_training_2026_mantis
+Repo for python_training_2026_mantis
