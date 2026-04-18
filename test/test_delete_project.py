@@ -14,7 +14,7 @@ def test_del_project(app):
     assert app.session.is_logged_in_as("administrator")
     name = random_string("name_", 10)
     description = random_string("desc_", 10)
-    if app.project.get_list() == 0:
+    if len(app.project.get_list()) == 0:
         app.project.add(Project(name=name, description=description))
     old_projects_list = app.project.get_list()
     project = random.choice(old_projects_list)
