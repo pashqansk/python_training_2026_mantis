@@ -10,8 +10,6 @@ def random_string(prefix, maxlen):
 
 
 def test_del_project(app):
-    app.session.login("administrator", "root")
-    assert app.session.is_logged_in_as("administrator")
     name = random_string("name_", 10)
     description = random_string("desc_", 10)
     if len(app.project.get_list()) == 0:

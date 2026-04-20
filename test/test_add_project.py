@@ -10,8 +10,6 @@ def random_string(prefix, maxlen):
 
 
 def test_add_project(app):
-    app.session.login("administrator", "root")
-    assert app.session.is_logged_in_as("administrator")
     name = random_string("name_", 10)
     description = random_string("desc_", 10)
     old_projects_list = app.project.get_list()
